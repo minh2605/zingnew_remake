@@ -1,0 +1,52 @@
+*,
+*::after,
+*:before {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+}
+
+nav {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  object-fit: cover;
+  max-width: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-weight: 300;
+  max-width: 100vw;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+$text_color: #444;
+
+@import "./mixin.scss";
+@import "./header.scss";
+@import "./feature_section.scss";
+@import "./multimedia_section.scss";
+@import "./book_section.scss";
+@import "./other_section.scss";
+@import "./stand_out_section.scss";
+@import "./magazine_section.scss";
+@import "./compound_section.scss";
+@import "./video_section.scss";
+@import "./end_section.scss";
+
+@import "./footer.scss";

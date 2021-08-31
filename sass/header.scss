@@ -1,0 +1,115 @@
+.header {
+  $nav_hover: #04b2f7;
+  &__banner {
+    height: 270px;
+  }
+  &__bottom {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    &-container {
+      @include flex(center, space-between);
+    }
+  }
+  &__logo {
+    cursor: pointer;
+    &-img {
+      width: 95px;
+      height: 30px;
+    }
+    &-text {
+      font-size: 8px;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-top: 2px;
+    }
+  }
+  &__nav {
+    @include flex(center, space-between);
+    &-item {
+      margin-right: 15px;
+      font-weight: 500;
+      font-size: 14px;
+      a {
+        display: block;
+        color: $text_color;
+        padding: 18px 0;
+        border-bottom: 3px solid #fff;
+      }
+      &:hover {
+        a {
+          color: $nav_hover;
+          border-bottom-color: $nav_hover;
+        }
+      }
+      &:last-child {
+        i {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  &__options {
+    @include flex(center, center);
+  }
+  &__search {
+    padding: 0 12px;
+    i {
+      font-size: 20px;
+    }
+    &:hover {
+      i {
+        color: $nav_hover;
+        cursor: pointer;
+      }
+    }
+  }
+  &__user {
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #fff;
+  }
+}
+
+@include maxWidth(1023px) {
+  .header {
+    &__top {
+      display: none;
+    }
+    &__bottom {
+      &-container {
+        padding: 10px 20px;
+      }
+    }
+    &__logo {
+      order: 1;
+    }
+    &__options {
+      order: 2;
+    }
+    &__nav {
+      li {
+        display: none;
+        &:last-child {
+          display: block;
+        }
+      }
+    }
+  }
+}
+@include maxWidth(599px) {
+  .header {
+    &__user {
+      border: 1px solid black;
+      @include flex(center, center);
+      &-img {
+        @include flex(center, center);
+        img {
+          width: 60%;
+          height: 60%;
+        }
+      }
+    }
+  }
+}

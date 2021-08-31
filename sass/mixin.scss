@@ -1,0 +1,18 @@
+@mixin flex(
+  $align: flex-start,
+  $justify: flex-start,
+  $wrap: nowrap,
+  $dir: row
+) {
+  display: flex;
+  flex-direction: $dir;
+  flex-wrap: $wrap;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin maxWidth($w) {
+  @media screen and (max-width: $w) {
+    @content;
+  }
+}

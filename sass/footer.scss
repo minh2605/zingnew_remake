@@ -1,0 +1,33 @@
+.footer {
+  padding: 20px 0;
+  background-color: #f7f7f7;
+  &__logo {
+    width: 95px;
+    height: 29px;
+    img {
+      object-fit: contain;
+    }
+  }
+  &__list {
+    @include flex(flex-end, space-between);
+    p {
+      font-size: 12px;
+      line-height: 1.5;
+      color: #968896;
+    }
+  }
+}
+@include maxWidth(800px) {
+  .footer {
+    &__logo {
+      margin: 0 auto;
+    }
+    &__list {
+      align-items: center;
+      flex-direction: column;
+      p {
+        text-align: center;
+      }
+    }
+  }
+}

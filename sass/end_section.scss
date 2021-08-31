@@ -1,0 +1,48 @@
+.end {
+  background-color: #f1faff;
+  padding: 30px 0;
+  &__list {
+    @include flex(stretch, space-between);
+    gap: 10px;
+  }
+  &__item {
+    width: calc(33.33% - 10px);
+    @include flex(flex-start, flex-start, nowrap, column);
+  }
+  .item {
+    &__type {
+      font-size: 16px;
+      font-weight: 600;
+      color: #00b6af;
+      margin-bottom: 20px;
+    }
+    &__content {
+      @include flex(stretch);
+      padding-bottom: 15px;
+    }
+    &__img {
+      width: 120px;
+      height: 80px;
+      flex-shrink: 0;
+      margin-right: 10px;
+    }
+    &__title {
+      font-size: 13px;
+      font-weight: 500;
+      line-height: 1.4;
+    }
+    &__others {
+      @include flex(stretch, flex-start, nowrap, column);
+    }
+    &__links {
+      padding: 15px 0;
+      margin-bottom: 10px;
+      border-top: 1px dashed rgba(0, 0, 0, 0.2);
+      a {
+        color: #000;
+        font-weight: 500;
+        font-size: 13px;
+      }
+    }
+  }
+}
